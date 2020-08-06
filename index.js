@@ -9,14 +9,9 @@ let pets = [
 
 };
 
-let petsWithAge=pets.forEach((pet)=>{
-    alert(getAge(pet));
-});
+pets.forEach((pet)=>pet.age = getAge(pet));
 
-let dogs=pets.filter((pet)=>{
-    alert( pet.type=="dog");
-});
-let jasper=pets.find((pet)=>{
-  pet.name=="jasper" 
-});
+const dogs=pets.filter(pet=>pet.type=="dog");
+
+const jasper=pets.find((pet)=> pet.name=="jasper");
 alert (`Jasper is ${jasper.age} years old `);
